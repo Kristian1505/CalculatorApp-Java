@@ -73,4 +73,6 @@ Result: 10.0 + 5.0 = 15.0
 
 Contributions are welcome! Feel free to open issues or submit pull requests for improvements or bug fixes.
 
+---
+
 Made with ❤️ by Kristian
