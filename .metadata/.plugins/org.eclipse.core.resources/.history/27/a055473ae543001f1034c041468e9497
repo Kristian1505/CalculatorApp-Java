@@ -5,23 +5,23 @@ import java.util.Scanner;
 public class CalculatorApp {
 
 	public static void main(String[] args) {
-		// Create a Scanner object for user input
+        // Create a Scanner object for user input
 		Scanner sc = new Scanner(System.in);
 
-		// Loop to keep the calculator running until the user decides to exit
+        // Loop to keep the calculator running until the user decides to exit
 		while (true) {
 			System.out.println("***** CALCULATOR *****");
 
 			// Show Menu
 			showMenu();
-
+			
 			try {
-
+                // Read user input
 				int option = Integer.parseInt(sc.nextLine());
 				if (option >= 1 && option <= 4) {
-					// Calculate
+					//Calculate
 					calculate(option, sc);
-				} else if (option == 5) {
+					} else if (option == 5) {
 					System.out.println("See you soon...");
 					break;
 				} else {
@@ -34,9 +34,10 @@ public class CalculatorApp {
 		} // End of while loop
 		sc.close();
 	} // End of main method
-
+	
+	
 	// Method to display the menu
-	private static void showMenu() {
+	private static void showMenu(){
 		System.out.println("""
 				 __________________
 				|1. Addition       |
@@ -49,13 +50,14 @@ public class CalculatorApp {
 
 		System.out.print("Select an option: ");
 	} // End of showMenu method
-
+	
+	
 	// Method to perform calculations based on the selected option
-	private static void calculate(int option, Scanner sc) {
+	private static void calculate(int option, Scanner sc){
 		double firstOperand = 0;
 		double secondOperand = 0;
 		boolean validOperand = false;
-
+		
 		// Loop to ensure valid operands are entered
 		while (!validOperand) {
 			try {
@@ -67,11 +69,11 @@ public class CalculatorApp {
 
 				validOperand = true;
 			} catch (Exception e) {
-				System.out.println("Invalid input. Only numbers are valid.");
+				System.out	.println("Invalid input. Only numbers are valid.");
 			} // End of try catch
 		} // End of while loop
 		double result;
-
+		
 		// Perform the selected calculation
 		switch (option) {
 		case 1:
@@ -91,14 +93,12 @@ public class CalculatorApp {
 			if (secondOperand != 0) {
 				result = firstOperand / secondOperand;
 				System.out.println("Result: " + firstOperand + " / " + secondOperand + " = " + result);
-			} else {
-				System.out.println("Error: Division by zero is not allowed.");
-			}
+			} else {System.out.println("Error: Division by zero is not allowed.");}
 			break;
 		default:
 			System.out.println("Error: " + option);
 
-		} // End of calculate
+		} //End of calculate
 
-	} // End of calculate method
+	} //End of calculate method
 } // End of CalculatorApp class
