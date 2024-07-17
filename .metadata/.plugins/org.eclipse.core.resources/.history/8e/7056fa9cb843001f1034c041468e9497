@@ -1,0 +1,23 @@
+package com.calculator;
+
+public class CalculatorApp {
+	
+	public static void main(String[] args) {
+		System.out.println("***** CALCULATOR *****");
+		
+		double firstOperand = 50;
+		double secondOperand = 30;
+		double result;
+		
+		double sum = firstOperand + secondOperand;
+		double subs = firstOperand - secondOperand;
+		double product = firstOperand * secondOperand;
+		double div = firstOperand / secondOperand;
+		
+		System.out.println("Resultado de la suma de " + firstOperand + " + " + secondOperand + " = " + sum);
+		System.out.println("Resultado de la resta de " + firstOperand + " - " + secondOperand + " = " + subs);
+		System.out.println("Resultado de la multiplicación de " + firstOperand + " * " + secondOperand + " = " + product);
+		System.out.println("Resultado de la división de " + firstOperand + " / " + secondOperand + " = " + div);
+	}
+
+}

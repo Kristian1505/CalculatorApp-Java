@@ -1,0 +1,63 @@
+package com.calculator;
+
+import java.util.Scanner;
+
+public class CalculatorApp {
+
+	public static void main(String[] args) {
+		Scanner console = new Scanner(System.in);
+
+		System.out.println("***** CALCULATOR *****");
+
+		// Show Menu
+		System.out.println("""
+				 __________________
+				|1. Addition       |
+				|2. Subtraction    |
+				|3. Multiplication |
+				|4. Division       |
+				|5. Exit           |
+				*------------------*
+				""");
+
+		System.out.print("Select an option: ");
+		int operation = Integer.parseInt(console.nextLine());
+		if (operation >= 1 && operation <= 4) {
+
+			System.out.print("Enter the first operand: ");
+			double firstOperand = Integer.parseInt(console.nextLine());
+
+			System.out.print("Enter the second operand: ");
+			double secondOperand = Integer.parseInt(console.nextLine());
+
+			double result;
+
+			switch (operation) {
+			case 1:
+				result = firstOperand + secondOperand;
+				System.out.println("Result: " + firstOperand + " + " + secondOperand + " = " + result);
+				break;
+			case 2:
+				result = firstOperand - secondOperand;
+				System.out.println("Result: " + firstOperand + " - " + secondOperand + " = " + result);
+				break;
+			case 3:
+				result = firstOperand * secondOperand;
+				System.out.println("Result: " + firstOperand + " * " + secondOperand + " = " + result);
+				break;
+			case 4:
+				result = firstOperand / secondOperand;
+				System.out.println("Result: " + firstOperand + " / " + secondOperand + " = " + result);
+				break;
+			default:
+				System.out.println("Error: " + operation);
+
+			}
+		} else if (operation == 5) {
+			System.out.println("See you soon...");
+		} else {
+			System.out.println("Wrong option: " + operation);
+		}
+		;
+	}
+}

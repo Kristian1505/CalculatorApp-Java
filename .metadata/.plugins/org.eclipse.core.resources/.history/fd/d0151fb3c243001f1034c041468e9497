@@ -1,0 +1,39 @@
+package com.calculator;
+
+import java.util.Scanner;
+
+public class CalculatorApp {
+	
+	public static void main(String[] args) {
+		System.out.println("***** CALCULATOR *****");
+		//Show Menu
+		System.out.println("""
+				|1. Suma		   |
+				|2. Resta		   |
+				|3. Multiplicación |
+				|4. Division	   |		
+				|5. Salir 		   |
+				""");
+		
+		Scanner console = new Scanner(System.in);
+		
+		System.out.print("Give me this first operand: ");
+		double firstOperand = Integer.parseInt(console.nextLine());
+		
+		System.out.print("Give me the second operand: ");
+		double secondOperand = Integer.parseInt(console.nextLine());
+		System.out.println(firstOperand + secondOperand);
+		double result;
+		
+		double sum = firstOperand + secondOperand;
+		double subs = firstOperand - secondOperand;
+		double product = firstOperand * secondOperand;
+		double div = firstOperand / secondOperand;
+		
+		System.out.println("Resultado de la suma de " + firstOperand + " + " + secondOperand + " = " + sum);
+		System.out.println("Resultado de la resta de " + firstOperand + " - " + secondOperand + " = " + subs);
+		System.out.println("Resultado de la multiplicación de " + firstOperand + " * " + secondOperand + " = " + product);
+		System.out.println("Resultado de la división de " + firstOperand + " / " + secondOperand + " = " + div);
+	}
+
+}
